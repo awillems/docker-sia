@@ -1,5 +1,5 @@
 FROM golang AS builder
-LABEL maintainer="Michael Lynch <michael@mtlynch.io>"
+LABEL maintainer="kibako <aaron@amwtech.net>"
 
 ENV GOOS linux
 ENV GOARCH arm64
@@ -10,7 +10,7 @@ RUN go get -d -u github.com/NebulousLabs/Sia/... && \
     make release
 
 FROM alpine
-LABEL maintainer="Michael Lynch <michael@mtlynch.io>"
+LABEL maintainer="kibako <aaron@amwtech.net>"
 
 ENV SIA_DIR /sia
 ENV SIA_DATA_DIR="/sia-data"
