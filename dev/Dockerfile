@@ -2,7 +2,7 @@ FROM golang AS builder
 LABEL maintainer="Michael Lynch <michael@mtlynch.io>"
 
 ENV GOOS linux
-ENV GOARCH amd64
+ENV GOARCH arm64
 ENV CGO_ENABLED 0
 
 RUN go get -d -u github.com/NebulousLabs/Sia/... && \
